@@ -11,7 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <head>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
   </head>
   <body>
     <div class="wrapper-1" id="landing">
@@ -144,15 +146,15 @@
     <div class="wrapper-6" id="contact">
       <h2 class="wrapper-6-title">Kontaktieren Sie uns!</h2>
       <div class="wrapper-6-container">
-        <form action="http://httpbin.org/post" method="POST" class="wrapper-6-container-form">
+        <form action="http://httpbin.org/post" method="POST" class="wrapper-6-container-form" id="newform">
           <input type="text" name="name" id="name" placeholder="Name*" class="form-input">
           <input type="text" name="surname" id="surname" placeholder="Nachname*" class="form-input">
           <input type="text" name="company" id="company" placeholder="Firma" class="form-input">
           <input type="text" name="phone" id="phone" placeholder="Telefon" class="form-input">
           <input type="email" name="email" id="email" placeholder="Email*" class="form-input">
           <textarea name="msg" id="msg" rows="10" cols="40" placeholder="Ihre Nachricht*" class="form-input msg"></textarea>
-          <div class="g-recaptcha" data-sitekey="6Lf-9NMqAAAAAFrAQz8p_X1dVz_b5CpHaMX9FQxw"></div>
-          <button type="submit" class="wrapper-6-container-form-btn" >Schicken!</button>
+          <div class="g-recaptcha" data-sitekey="6LfjJNQqAAAAANq9r9ZwbV83QVgTHNnjajDMnlFa"></div>
+          <button type="submit"  class=" wrapper-6-container-form-btn" >Schicken!</button>
         </form>
         <div class="wrapper-6-social">
           <h3 class="wrapper-6-social-title">Unsere email</h3>
@@ -168,5 +170,10 @@
       </div>
     </div>
     <footer class="wrapper-7"></footer>
+<script>
+  function onSubmit(token) {
+    document.getElementById("newform").submit();
+  }
+</script>
   </body>
 </html>
