@@ -18,6 +18,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   color: unset;
   list-style: none;
