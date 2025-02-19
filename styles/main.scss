@@ -61,6 +61,7 @@ a {
     }
     @media screen and (orientation: portrait) and (max-width: 600px){
       height: 5rem;
+      padding: 1.25rem 2rem;
     }
     .wrapper-1-header-title{
       font-size: 2.4rem;
@@ -214,9 +215,6 @@ a {
         border: 2px solid var(--darkgray);
         cursor: pointer;
         border-radius: 0.75rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         transition: 250ms ease;
         background-color: var(--white);
         @media screen and (max-width: 1600px){
@@ -255,6 +253,14 @@ a {
           span {
             margin-left: 1.4rem;
             transition: 250ms ease;
+          }
+        }
+        a{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          @media screen and (orientation: portrait) and (max-width: 600px){
+            justify-content: center;
           }
         }
       }
@@ -753,6 +759,13 @@ a {
       #phone{
         grid-column: 1/2;
         grid-row: 3/4;
+        &::-webkit-outer-spin-button,
+&::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
       }
       #email{
         grid-column: 2/3;
@@ -828,6 +841,7 @@ a {
         display: flex;
         width: fit-content;
         margin-top: 2rem;
+        cursor: pointer;
         @media screen and (orientation: portrait) {
           margin-top: 1rem;
         }
@@ -837,9 +851,12 @@ a {
           border-radius: 0.15rem;
           background-position: center;
           background-size: cover;
+          cursor: pointer;
+          border: none;
+          background-color: unset;
           @media screen and (max-width: 1600px){
             width: 2.5rem;
-          height: 2.5rem;
+            height: 2.5rem;
           }
           &:nth-child(2){
             margin: 0 2rem;
@@ -847,6 +864,7 @@ a {
         }
         .fb{
           background-image: url(../assets/icons/fb-icon.png);
+          
         }
         .ig{
           background-image: url(../assets/icons/ig-icon.png);

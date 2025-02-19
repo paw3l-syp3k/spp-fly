@@ -64,6 +64,7 @@ a:visited {
 @media screen and (orientation: portrait) and (max-width: 600px) {
   .wrapper-1 .wrapper-1-header {
     height: 5rem;
+    padding: 1.25rem 2rem;
   }
 }
 .wrapper-1 .wrapper-1-header .wrapper-1-header-title {
@@ -249,9 +250,6 @@ a:visited {
   border: 2px solid var(--darkgray);
   cursor: pointer;
   border-radius: 0.75rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   transition: 250ms ease;
   background-color: var(--white);
 }
@@ -300,6 +298,16 @@ a:visited {
 .wrapper-1 .wrapper-1-content .wrapper-1-content-btns-container .wrapper-1-content-btn:hover span {
   margin-left: 1.4rem;
   transition: 250ms ease;
+}
+.wrapper-1 .wrapper-1-content .wrapper-1-content-btns-container .wrapper-1-content-btn a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media screen and (orientation: portrait) and (max-width: 600px) {
+  .wrapper-1 .wrapper-1-content .wrapper-1-content-btns-container .wrapper-1-content-btn a {
+    justify-content: center;
+  }
 }
 .wrapper-1 .wrapper-1-img {
   width: 40%;
@@ -924,6 +932,11 @@ a:visited {
   grid-column: 1/2;
   grid-row: 3/4;
 }
+.wrapper-6 .wrapper-6-container .wrapper-6-container-form #phone::-webkit-outer-spin-button, .wrapper-6 .wrapper-6-container .wrapper-6-container-form #phone::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 .wrapper-6 .wrapper-6-container .wrapper-6-container-form #email {
   grid-column: 2/3;
   grid-row: 3/4;
@@ -1015,6 +1028,7 @@ a:visited {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 2rem;
+  cursor: pointer;
 }
 @media screen and (orientation: portrait) {
   .wrapper-6 .wrapper-6-container .wrapper-6-social .wrapper-6-social-container {
@@ -1027,6 +1041,9 @@ a:visited {
   border-radius: 0.15rem;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
 }
 @media screen and (max-width: 1600px) {
   .wrapper-6 .wrapper-6-container .wrapper-6-social .wrapper-6-social-container .wrapper-6-social-container-item {
