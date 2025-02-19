@@ -11,14 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <head>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    </head>
   </head>
   <body>
     <div class="wrapper-1" id="landing">
       <header class="wrapper-1-header">
-        <h1 class="wrappe-1-header-title"><a href="#landing">SPP_SKY</a></h1>
+        <h1 class="wrapper-1-header-title"><a href="#landing">SPP_SKY</a></h1>
         <nav class="wrapper-1-header-nav">
           <ul class="wrapper-1-header-nav-list">
             <li class="wrapper-1-header-nav-list-item"><a href="#offer">Angebot</a></li>
@@ -26,12 +23,17 @@
             <li class="wrapper-1-header-nav-list-item"><a href="#contact">Kontakt</a></li>
           </ul>
         </nav>
+        <div class="wrapper-1-header-hamburger ">
+          <div class="wrapper-1-header-hamburger-line"></div>
+          <div class="wrapper-1-header-hamburger-line"></div>
+          <div class="wrapper-1-header-hamburger-line"></div>
+        </div>
       </header>
       <div class="wrapper-1-content">
         <h2 class="wrapper-1-content-title">
           Ändern den<br />
           Blickwinkel<br />
-          & <span>zeigen mehr.</span>.
+          & <span>zeigen mehr</span>...
         </h2>
         <p class="wrapper-1-content-description">
           Ich mache für Sie atemberaubende Fotos und Videos aus der Drohne! Zeigen Sie Ihren Kunden und Followern eine andere Perspektive!
@@ -146,14 +148,13 @@
     <div class="wrapper-6" id="contact">
       <h2 class="wrapper-6-title">Kontaktieren Sie uns!</h2>
       <div class="wrapper-6-container">
-        <form action="http://httpbin.org/post" method="POST" class="wrapper-6-container-form" id="newform">
+        <form class="wrapper-6-container-form" >
           <input type="text" name="name" id="name" placeholder="Name*" class="form-input">
           <input type="text" name="surname" id="surname" placeholder="Nachname*" class="form-input">
           <input type="text" name="company" id="company" placeholder="Firma" class="form-input">
           <input type="text" name="phone" id="phone" placeholder="Telefon" class="form-input">
           <input type="email" name="email" id="email" placeholder="Email*" class="form-input">
           <textarea name="msg" id="msg" rows="10" cols="40" placeholder="Ihre Nachricht*" class="form-input msg"></textarea>
-          <div class="g-recaptcha" data-sitekey="6LfjJNQqAAAAANq9r9ZwbV83QVgTHNnjajDMnlFa"></div>
           <button type="submit"  class=" wrapper-6-container-form-btn" >Schicken!</button>
         </form>
         <div class="wrapper-6-social">
@@ -170,10 +171,6 @@
       </div>
     </div>
     <footer class="wrapper-7"></footer>
-<script>
-  function onSubmit(token) {
-    document.getElementById("newform").submit();
-  }
-</script>
+<script src="./js/app.js"></script>
   </body>
 </html>
