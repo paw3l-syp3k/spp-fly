@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./assets/test1.png">
+    <meta name="description" content="Wir machen für Sie Drohnenfotos und -videos in höchster Qualität! Wir sind in Altötting, Mühldorf am Inn, Neuötting, Garching an der Alz und Umgebung!">
+    <meta name="keywords" content="drone,drohne, drohnenfoto, foto, drohnenvideo, Altötting, Mühldorf am Inn, Mühldorf,Neuötting,Garching an der Alz">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7gDlrd66iVyTWZ6A-",
+      });
+   })();
+</script>
   </head>
   <body>
     <div class="wrapper-1" id="landing">
@@ -150,22 +163,22 @@
       <div class="wrapper-6-container">
         <form class="wrapper-6-container-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="0c672c33-66c9-4146-a301-097c2e22f7a1">
-          <input type="text" name="name" id="name" placeholder="Name*" class="form-input">
-          <input type="text" name="surname" id="surname" placeholder="Nachname*" class="form-input">
-          <input type="text" name="company" id="company" placeholder="Firma" class="form-input">
-          <input type="text" name="phone" id="phone" placeholder="Telefon" class="form-input">
-          <input type="email" name="email" id="email" placeholder="Email*" class="form-input">
-          <textarea name="msg" id="msg" rows="10" cols="40" placeholder="Ihre Nachricht*" class="form-input msg"></textarea>
-          <button type="submit"  class=" wrapper-6-container-form-btn" >Schicken!</button>
+          <input type="text" name="name" maxlength="25" id="name" placeholder="Name*" class="form-input" required>
+          <input type="text" maxlength="25" name="surname" id="surname" placeholder="Nachname*" required class="form-input">
+          <input type="text" maxlength="45" name="company" id="company" placeholder="Firma" class="form-input">
+          <input type="number" name="phone" id="phone" placeholder="Telefon"  inputmode="numeric" class="form-input">
+          <input type="email" maxlength="45" name="email" id="email" placeholder="Email*" required class="form-input">
+          <textarea name="msg" id="msg" rows="10" cols="40" placeholder="Ihre Nachricht*" maxlength="500" required class="form-input msg"></textarea>
+          <button type="submit" onclick="sendMail()" class=" wrapper-6-container-form-btn" >Schicken!</button>
         </form>
         <div class="wrapper-6-social">
           <h3 class="wrapper-6-social-title">Unsere email</h3>
           <p class="wrapper-6-social-email">kontakt@spp-sky.de</p>
           <h3 class="wrapper-6-social-title">Schauen Sie bei uns vorbei!</h3>
           <div class="wrapper-6-social-container">
-            <div class="wrapper-6-social-container-item ig"></div>
-            <div class="wrapper-6-social-container-item fb"></div>
-            <div class="wrapper-6-social-container-item tt"></div>
+            <button class="wrapper-6-social-container-item ig"></button>
+            <button class="wrapper-6-social-container-item fb"></button>
+            <button class="wrapper-6-social-container-item tt"></button>
           </div>
           
         </div>
