@@ -147,7 +147,7 @@ a:visited {
     border-bottom: 4px solid var(--main-green);
     left: 0;
     top: 0;
-    height: 10vh;
+    height: 50vh;
     margin-top: 5rem;
     width: 100%;
   }
@@ -294,7 +294,7 @@ a:visited {
   color: var(--black);
 }
 .wrapper-1 .wrapper-1-content .wrapper-1-content-btns-container .wrapper-1-content-btn:hover span {
-  margin-left: 1rem;
+  margin-left: 1.4rem;
   transition: 250ms ease;
 }
 .wrapper-1 .wrapper-1-img {
